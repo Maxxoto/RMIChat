@@ -40,7 +40,7 @@ public class ChatServer implements ChatServerIF {
 		
 		try{
 			ChatServerIF hello = new ChatServer();
-                        ChatServerIF stub = (ChatServerIF) UnicastRemoteObject.exportObject(hello, 1100);                        
+                        ChatServerIF stub = (ChatServerIF) UnicastRemoteObject.exportObject(hello, 1099);                        
                         Registry registry = LocateRegistry.getRegistry();
                         registry.bind("ChatServerIF", stub);
 			Naming.rebind("rmi://" + hostName + "/" + serviceName, hello);
